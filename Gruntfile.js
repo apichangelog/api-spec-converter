@@ -9,10 +9,7 @@ module.exports = function (grunt) {
                 dest: '<%= outputFolder %>/<%= pkg.name %>.js',
                 options: {
                     browserifyOptions: { standalone: 'APISpecConverter' },
-                    banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n',
-                    ignore: [
-                      './lib/types/api_blueprint.js',
-                    ]
+                    banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n'
                 },
             }
         },
