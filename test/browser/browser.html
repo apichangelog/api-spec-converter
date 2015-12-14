@@ -35,10 +35,8 @@
       file += '/' + testCaseItem.file;
       return file;
     }
-    var DISABLED = ['api_blueprint']
     describe('Converter', function() {
       TestCases.forEach(function(testCase) {
-        if (DISABLED.indexOf(testCase.in.type) !== -1) return;
         it('should convert ' + testCase.in.type + ' to ' + testCase.out.type, function(done) {
           var infile = host + '/test/input/' + getFilename(testCase.in);
           var outfile = host + '/test/output/' + getFilename(testCase.out);
